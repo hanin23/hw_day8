@@ -2,5 +2,6 @@
 
 A new Flutter project.
 
-assets/product_screen.png
+![Product Screen](assets/product_screen.png)
+
 
