@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:hw_day8/screens/data_screen.dart';
+import 'package:hw_day8/screens/login_screen.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: "https://aeqkotsxmmuocrkalmwy.supabase.co",
+    anonKey: "sb_publishable_aurh_hSjKE-pYaz9A1uopg_AdW1DLhB",
+  );
+
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -11,7 +19,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: DataScreen(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
